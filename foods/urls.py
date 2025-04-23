@@ -7,6 +7,7 @@ router.register(r'api', FoodsViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('findByMenu/<int:menu_id>/',FindFoodsByMenu.as_view(),name='find-foods-by-menu')
+    path('findByMenu/<int:menu_id>/',FindFoodsByMenu.as_view(),name='find-foods-by-menu'),
+    path('user/<int:user_id>/foods/', UserFoodsView.as_view(), name='user-foods'),
 
 ]
